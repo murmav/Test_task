@@ -1,0 +1,10 @@
+google
+google-api-python-client
+sqlalchemy
+gspread
+pandas
+time
+urllib3
+datetime
+requests
+psycopg2
