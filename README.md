@@ -4,9 +4,11 @@
 
 Для работы кода необходимо установить следудющие библиотеки:
 
-pip install google.oauth2, googleapiclient, sqlalchemy, gspread, pandas, time, urllib.request, xml.dom
+Создайте виртуальное окружение и установите следующие библиотеки:
 
-pip install datetime, requests, psycopg2
+pip install requirements.txt
+
+Необходимо запустить телеграм бота @Delivery_srok_bot
 
 Оба скрипта работают независимо друг от друга.
 
@@ -17,4 +19,8 @@ pip install datetime, requests, psycopg2
 Необходимо иметь базу данных PostgresSQL
 
 Ссылка на Google sheets https://docs.google.com/spreadsheets/d/10CxbGyGH0C0-v2EVH0MOcjYGLdb0esAwzNo1L2ITTx8/edit#gid=0 
+
+Первый скрипт каждую минуту запрашивает время изменения Google sheet, и если оно изменилось перезаписывает табдицу в базе данных.
+
+Второй скрипт раз в сутки скачивает таблицу, и если находит в ней просроченные заказы отправляет сообщение в телеграм.
 
